@@ -1,0 +1,25 @@
+{
+    "cookies": [
+        {
+            "name": "memos_session",
+            "value": "MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "domain": "localhost",
+            "path": "/",
+            "expires": 1781347255,
+            "httpOnly": true,
+            "secure": false,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "memos.access-token",
+            "value": "eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6MTc3OTQ0ODc2MSwiaWF0IjoxNzc4ODQzOTYxfQ.-OoyBzsD5OuELKjYFMEw0aZQFiXcwaGNzod6OyPAKmc",
+            "domain": "localhost",
+            "path": "/",
+            "expires": 1779436042,
+            "httpOnly": true,
+            "secure": false,
+            "sameSite": "Lax"
+        }
+    ],
+    "origins": []
+}

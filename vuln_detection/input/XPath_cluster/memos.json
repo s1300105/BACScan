@@ -1,0 +1,28 @@
+{
+    "uheVPYlKwf": [
+        {
+            "INSERT": "ADMIN|POST|http://localhost:5230/api/v1/memos|b:content,visibility|bv:visibility=PRIVATE|ct:json"
+        }
+    ],
+    "6bF41hxpKj": [
+        {
+            "INSERT": "ADMIN|PATCH|http://localhost:5230/api/v1/memos/{id}|b:content|ct:json"
+        },
+        {
+            "UPDATE": "ADMIN|PATCH|http://localhost:5230/api/v1/memos/{id}|b:content|ct:json"
+        }
+    ],
+    "ofh1lwgp89": [
+        {
+            "DELETE": "ADMIN|DELETE|http://localhost:5230/api/v1/memos/{id}"
+        },
+        {
+            "DELETE": "ADMIN|DELETE|http://localhost:5230/api/v1/memos/{id}"
+        }
+    ],
+    "JvNDU03tVU": [
+        {
+            "UPDATE": "ADMIN|PATCH|http://localhost:5230/api/v1/users/{id}|b:nickname|ct:json"
+        }
+    ]
+}
