@@ -874,6 +874,9 @@ async def process_node_dependencies(node, info, graph, token_map, data_dependenc
             response = probe_info.get('response') if replace_success else None
             _print_subblock("Operation probe", lines, response)
         if skip_invalid:
+            _method = (info.get("method") or "").upper()
+            if _method in ("PATCH", "PUT") and not (graph.get(node) or {}).get("operation"):
+                _set_operation(graph, node, "UPDATE")
             _flush_detected_dependence(node)
             return data_dependence_dict
         if override_info is not None:
@@ -911,6 +914,13 @@ async def process_node_dependencies(node, info, graph, token_map, data_dependenc
                 )
                 if success:
                     continue
+
+    # method-based fallback for PATCH/PUT without detected dependency
+    method = (info.get("method") or "").upper()
+    if method in ("PATCH", "PUT"):
+        current_op = (graph.get(node) or {}).get("operation")
+        if not current_op:
+            _set_operation(graph, node, "UPDATE")
 
     _flush_detected_dependence(node)
     return data_dependence_dict
@@ -956,6 +966,7 @@ async def build_dependence(graph):
             if any(re.search(_pat, _url) for _pat in _skip_probe_patterns):
                 if node in _existing_dep:
                     data_dependence_dict[node] = _existing_dep[node]
+                _set_operation(graph, node, "DELETE")
                 continue
 
         data_dependence_dict = await process_node_dependencies(node, info, graph, token_map, data_dependence_dict,

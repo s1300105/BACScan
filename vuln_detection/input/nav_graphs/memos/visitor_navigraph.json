@@ -14,10 +14,10 @@
         "post_params": "",
         "edges": [
             "VISITOR|GET|http://localhost:5230/explore",
-            "VISITOR|GET|http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus",
+            "VISITOR|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile",
             "VISITOR|GET|http://localhost:5230/memos.api.v1.WorkspaceSettingService/GetWorkspaceSetting",
-            "VISITOR|GET|http://localhost:5230/site.webmanifest",
-            "VISITOR|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile"
+            "VISITOR|GET|http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus",
+            "VISITOR|GET|http://localhost:5230/site.webmanifest"
         ],
         "role": "visitor",
         "public": true,
@@ -103,12 +103,11 @@
         "get_params": "",
         "post_params": "",
         "edges": [
-            "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
             "VISITOR|GET|http://localhost:5230/memos.api.v1.UserService/GetUser",
-            "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
             "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemos",
+            "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
+            "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
             "VISITOR|GET|http://localhost:5230/about",
-            "VISITOR|GET|http://localhost:5230/u/attacker1",
             "VISITOR|GET|http://localhost:5230/auth"
         ],
         "role": "visitor",
@@ -178,33 +177,6 @@
             "body_kind": ""
         }
     },
-    "VISITOR|GET|http://localhost:5230/site.webmanifest": {
-        "req_url": "http://localhost:5230/site.webmanifest",
-        "headers": {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "accept-language": "en-US",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"macOS\""
-        },
-        "get_params": "",
-        "post_params": "",
-        "edges": [],
-        "role": "visitor",
-        "public": true,
-        "es_id": "VISITOR|GET|http://localhost:5230/site.webmanifest",
-        "method": "GET",
-        "operation": "SELECT",
-        "param_signature": {
-            "query_keys": [],
-            "query_values": [],
-            "body_keys": [],
-            "body_values": [],
-            "body_kind": ""
-        }
-    },
     "VISITOR|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile": {
         "req_url": "http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile",
         "headers": {
@@ -222,6 +194,33 @@
         "role": "visitor",
         "public": true,
         "es_id": "VISITOR|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "VISITOR|GET|http://localhost:5230/site.webmanifest": {
+        "req_url": "http://localhost:5230/site.webmanifest",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "visitor",
+        "public": true,
+        "es_id": "VISITOR|GET|http://localhost:5230/site.webmanifest",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {
@@ -288,8 +287,8 @@
             "body_kind": ""
         }
     },
-    "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags": {
-        "req_url": "http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
+    "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemos": {
+        "req_url": "http://localhost:5230/memos.api.v1.MemoService/ListMemos",
         "headers": {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US",
@@ -304,34 +303,7 @@
         "edges": [],
         "role": "visitor",
         "public": true,
-        "es_id": "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
-        "method": "GET",
-        "operation": "SELECT",
-        "param_signature": {
-            "query_keys": [],
-            "query_values": [],
-            "body_keys": [],
-            "body_values": [],
-            "body_kind": ""
-        }
-    },
-    "VISITOR|GET|http://localhost:5230/u/attacker1": {
-        "req_url": "http://localhost:5230/u/attacker1",
-        "headers": {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "accept-language": "en-US",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"macOS\""
-        },
-        "get_params": "",
-        "post_params": "",
-        "edges": [],
-        "role": "visitor",
-        "public": true,
-        "es_id": "VISITOR|GET|http://localhost:5230/u/attacker1",
+        "es_id": "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemos",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {
@@ -369,8 +341,8 @@
             "body_kind": ""
         }
     },
-    "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemos": {
-        "req_url": "http://localhost:5230/memos.api.v1.MemoService/ListMemos",
+    "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags": {
+        "req_url": "http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
         "headers": {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US",
@@ -385,7 +357,7 @@
         "edges": [],
         "role": "visitor",
         "public": true,
-        "es_id": "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemos",
+        "es_id": "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {
@@ -423,33 +395,6 @@
             "body_kind": ""
         }
     },
-    "VISITOR|GET|http://localhost:5230/about": {
-        "req_url": "http://localhost:5230/about",
-        "headers": {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "accept-language": "en-US",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"macOS\""
-        },
-        "get_params": "",
-        "post_params": "",
-        "edges": [],
-        "role": "visitor",
-        "public": true,
-        "es_id": "VISITOR|GET|http://localhost:5230/about",
-        "method": "GET",
-        "operation": "SELECT",
-        "param_signature": {
-            "query_keys": [],
-            "query_values": [],
-            "body_keys": [],
-            "body_values": [],
-            "body_kind": ""
-        }
-    },
     "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid": {
         "req_url": "http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
         "headers": {
@@ -467,6 +412,33 @@
         "role": "visitor",
         "public": true,
         "es_id": "VISITOR|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "VISITOR|GET|http://localhost:5230/about": {
+        "req_url": "http://localhost:5230/about",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "visitor",
+        "public": true,
+        "es_id": "VISITOR|GET|http://localhost:5230/about",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {

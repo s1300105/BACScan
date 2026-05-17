@@ -4,7 +4,7 @@
         "headers": {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6MTc3OTQ0ODc2MSwiaWF0IjoxNzc4ODQzOTYxfQ.-OoyBzsD5OuELKjYFMEw0aZQFiXcwaGNzod6OyPAKmc",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -14,11 +14,27 @@
         "get_params": "",
         "post_params": "",
         "edges": [
-            "USER|GET|http://localhost:5230/explore",
+            "USER|GET|http://localhost:5230/memos.api.v1.InboxService/ListInboxes",
+            "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile",
+            "USER|GET|http://localhost:5230/memos.api.v1.UserService/GetUserSetting",
+            "USER|GET|http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus",
+            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemo",
+            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
+            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/SetMemoResources",
+            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/SetMemoRelations",
+            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
             "USER|GET|http://localhost:5230/site.webmanifest",
             "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceSettingService/GetWorkspaceSetting",
-            "USER|GET|http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus",
-            "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile"
+            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/CreateMemo",
+            "USER|GET|http://localhost:5230/memos.api.v1.ResourceService/CreateResource",
+            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoProperties",
+            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemos",
+            "USER|GET|http://localhost:5230/archived",
+            "USER|GET|http://localhost:5230/inbox",
+            "USER|GET|http://localhost:5230/resources",
+            "USER|GET|http://localhost:5230/u/user1",
+            "USER|GET|http://localhost:5230/explore",
+            "USER|GET|http://localhost:5230/setting"
         ],
         "role": "user",
         "public": false,
@@ -38,7 +54,7 @@
         "headers": {
             "accept": "*/*",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6MTc3OTQ0ODc2MSwiaWF0IjoxNzc4ODQzOTYxfQ.-OoyBzsD5OuELKjYFMEw0aZQFiXcwaGNzod6OyPAKmc",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "referer": "http://localhost:5230/",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -67,7 +83,7 @@
         "headers": {
             "accept": "*/*",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "referer": "http://localhost:5230/",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -91,162 +107,13 @@
             "body_kind": ""
         }
     },
-    "USER|GET|http://localhost:5230/explore": {
-        "req_url": "http://localhost:5230/explore",
-        "headers": {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
-            "referer": "http://localhost:5230/",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"macOS\""
-        },
-        "get_params": "",
-        "post_params": "",
-        "edges": [
-            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
-            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemos",
-            "USER|GET|http://localhost:5230/memos.api.v1.UserService/GetUser",
-            "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
-            "USER|GET|http://localhost:5230/about",
-            "USER|GET|http://localhost:5230/u/attacker1",
-            "USER|GET|http://localhost:5230/auth"
-        ],
-        "role": "user",
-        "public": false,
-        "es_id": "USER|GET|http://localhost:5230/explore",
-        "method": "GET",
-        "operation": "SELECT",
-        "param_signature": {
-            "query_keys": [],
-            "query_values": [],
-            "body_keys": [],
-            "body_values": [],
-            "body_kind": ""
-        }
-    },
-    "USER|GET|http://localhost:5230/site.webmanifest": {
-        "req_url": "http://localhost:5230/site.webmanifest",
-        "headers": {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"macOS\""
-        },
-        "get_params": "",
-        "post_params": "",
-        "edges": [],
-        "role": "user",
-        "public": false,
-        "es_id": "USER|GET|http://localhost:5230/site.webmanifest",
-        "method": "GET",
-        "operation": "SELECT",
-        "param_signature": {
-            "query_keys": [],
-            "query_values": [],
-            "body_keys": [],
-            "body_values": [],
-            "body_kind": ""
-        }
-    },
-    "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceSettingService/GetWorkspaceSetting": {
-        "req_url": "http://localhost:5230/memos.api.v1.WorkspaceSettingService/GetWorkspaceSetting",
-        "headers": {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"macOS\""
-        },
-        "get_params": "",
-        "post_params": "",
-        "edges": [],
-        "role": "user",
-        "public": false,
-        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceSettingService/GetWorkspaceSetting",
-        "method": "GET",
-        "operation": "SELECT",
-        "param_signature": {
-            "query_keys": [],
-            "query_values": [],
-            "body_keys": [],
-            "body_values": [],
-            "body_kind": ""
-        }
-    },
-    "USER|GET|http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus": {
-        "req_url": "http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus",
-        "headers": {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"macOS\""
-        },
-        "get_params": "",
-        "post_params": "",
-        "edges": [],
-        "role": "user",
-        "public": false,
-        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus",
-        "method": "GET",
-        "operation": "SELECT",
-        "param_signature": {
-            "query_keys": [],
-            "query_values": [],
-            "body_keys": [],
-            "body_values": [],
-            "body_kind": ""
-        }
-    },
-    "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile": {
-        "req_url": "http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile",
-        "headers": {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-            "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
-            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"macOS\""
-        },
-        "get_params": "",
-        "post_params": "",
-        "edges": [],
-        "role": "user",
-        "public": false,
-        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile",
-        "method": "GET",
-        "operation": "SELECT",
-        "param_signature": {
-            "query_keys": [],
-            "query_values": [],
-            "body_keys": [],
-            "body_values": [],
-            "body_kind": ""
-        }
-    },
     "USER|GET|http://localhost:5230/api/v1/memos": {
         "req_url": "http://localhost:5230/api/v1/memos",
         "headers": {
             "accept": "*/*",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
-            "referer": "http://localhost:5230/explore",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "referer": "http://localhost:5230/",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
             "sec-ch-ua-mobile": "?0",
@@ -274,8 +141,8 @@
         "headers": {
             "accept": "*/*",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
-            "referer": "http://localhost:5230/explore",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "referer": "http://localhost:5230/",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
             "sec-ch-ua-mobile": "?0",
@@ -304,12 +171,529 @@
             "body_kind": "json"
         }
     },
+    "USER|GET|http://localhost:5230/api/v1/memos/{id}": {
+        "req_url": "http://localhost:5230/api/v1/memos/119",
+        "headers": {
+            "accept": "*/*",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "referer": "http://localhost:5230/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\"",
+            "x-grpc-web": "1"
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/api/v1/memos/{id}",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|PATCH|http://localhost:5230/api/v1/memos/{id}|b:content|ct:json": {
+        "req_url": "http://localhost:5230/api/v1/memos/119",
+        "headers": {
+            "accept": "*/*",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "referer": "http://localhost:5230/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\"",
+            "x-grpc-web": "1",
+            "content-type": "application/json"
+        },
+        "get_params": "",
+        "post_params": "{\"content\": \"test\"}",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|PATCH|http://localhost:5230/api/v1/memos/{id}|b:content|ct:json",
+        "method": "PATCH",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [
+                "content"
+            ],
+            "body_values": [],
+            "body_kind": "json"
+        }
+    },
+    "USER|DELETE|http://localhost:5230/api/v1/memos/{id}": {
+        "req_url": "http://localhost:5230/api/v1/memos/119",
+        "headers": {
+            "accept": "*/*",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "referer": "http://localhost:5230/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\"",
+            "x-grpc-web": "1"
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|DELETE|http://localhost:5230/api/v1/memos/{id}",
+        "method": "DELETE",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile": {
+        "req_url": "http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceService/GetWorkspaceProfile",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.InboxService/ListInboxes": {
+        "req_url": "http://localhost:5230/memos.api.v1.InboxService/ListInboxes",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.InboxService/ListInboxes",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/setting": {
+        "req_url": "http://localhost:5230/setting",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [
+            "USER|GET|http://localhost:5230/memos.api.v1.UserService/UpdateUser",
+            "USER|GET|http://localhost:5230/memos.api.v1.WebhookService/ListWebhooks"
+        ],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/setting",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemo": {
+        "req_url": "http://localhost:5230/memos.api.v1.MemoService/GetMemo",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemo",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.UserService/GetUserSetting": {
+        "req_url": "http://localhost:5230/memos.api.v1.UserService/GetUserSetting",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.UserService/GetUserSetting",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/explore": {
+        "req_url": "http://localhost:5230/explore",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [
+            "USER|GET|http://localhost:5230/memos.api.v1.UserService/GetUser"
+        ],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/explore",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.MemoService/SetMemoResources": {
+        "req_url": "http://localhost:5230/memos.api.v1.MemoService/SetMemoResources",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.MemoService/SetMemoResources",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus": {
+        "req_url": "http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.AuthService/GetAuthStatus",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/archived": {
+        "req_url": "http://localhost:5230/archived",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/archived",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceSettingService/GetWorkspaceSetting": {
+        "req_url": "http://localhost:5230/memos.api.v1.WorkspaceSettingService/GetWorkspaceSetting",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.WorkspaceSettingService/GetWorkspaceSetting",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags": {
+        "req_url": "http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid": {
+        "req_url": "http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.MemoService/SetMemoRelations": {
+        "req_url": "http://localhost:5230/memos.api.v1.MemoService/SetMemoRelations",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.MemoService/SetMemoRelations",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/site.webmanifest": {
+        "req_url": "http://localhost:5230/site.webmanifest",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/site.webmanifest",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/u/user1": {
+        "req_url": "http://localhost:5230/u/user1",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [
+            "USER|GET|http://localhost:5230/memos.api.v1.UserService/SearchUsers"
+        ],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/u/user1",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
     "USER|GET|http://localhost:5230/api/v1/users/{id}": {
         "req_url": "http://localhost:5230/api/v1/users/12",
         "headers": {
             "accept": "*/*",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "referer": "http://localhost:5230/explore",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -338,7 +722,7 @@
         "headers": {
             "accept": "*/*",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "referer": "http://localhost:5230/explore",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -370,7 +754,7 @@
         "headers": {
             "accept": "*/*",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "referer": "http://localhost:5230/explore",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -394,12 +778,12 @@
             "body_kind": ""
         }
     },
-    "USER|GET|http://localhost:5230/memos.api.v1.UserService/GetUser": {
-        "req_url": "http://localhost:5230/memos.api.v1.UserService/GetUser",
+    "USER|GET|http://localhost:5230/memos.api.v1.ResourceService/CreateResource": {
+        "req_url": "http://localhost:5230/memos.api.v1.ResourceService/CreateResource",
         "headers": {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -411,7 +795,7 @@
         "edges": [],
         "role": "user",
         "public": false,
-        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.UserService/GetUser",
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.ResourceService/CreateResource",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {
@@ -422,12 +806,12 @@
             "body_kind": ""
         }
     },
-    "USER|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid": {
-        "req_url": "http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
+    "USER|GET|http://localhost:5230/inbox": {
+        "req_url": "http://localhost:5230/inbox",
         "headers": {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -439,7 +823,35 @@
         "edges": [],
         "role": "user",
         "public": false,
-        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.MemoService/GetMemoByUid",
+        "es_id": "USER|GET|http://localhost:5230/inbox",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.MemoService/CreateMemo": {
+        "req_url": "http://localhost:5230/memos.api.v1.MemoService/CreateMemo",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.MemoService/CreateMemo",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {
@@ -455,7 +867,7 @@
         "headers": {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -478,12 +890,12 @@
             "body_kind": ""
         }
     },
-    "USER|GET|http://localhost:5230/about": {
-        "req_url": "http://localhost:5230/about",
+    "USER|GET|http://localhost:5230/resources": {
+        "req_url": "http://localhost:5230/resources",
         "headers": {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -492,10 +904,12 @@
         },
         "get_params": "",
         "post_params": "",
-        "edges": [],
+        "edges": [
+            "USER|GET|http://localhost:5230/memos.api.v1.ResourceService/ListResources"
+        ],
         "role": "user",
         "public": false,
-        "es_id": "USER|GET|http://localhost:5230/about",
+        "es_id": "USER|GET|http://localhost:5230/resources",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {
@@ -506,12 +920,12 @@
             "body_kind": ""
         }
     },
-    "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags": {
-        "req_url": "http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
+    "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoProperties": {
+        "req_url": "http://localhost:5230/memos.api.v1.MemoService/ListMemoProperties",
         "headers": {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -523,7 +937,7 @@
         "edges": [],
         "role": "user",
         "public": false,
-        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoTags",
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.MemoService/ListMemoProperties",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {
@@ -534,24 +948,25 @@
             "body_kind": ""
         }
     },
-    "USER|GET|http://localhost:5230/auth": {
-        "req_url": "http://localhost:5230/auth",
+    "USER|GET|http://localhost:5230/api/v1/resources": {
+        "req_url": "http://localhost:5230/api/v1/resources",
         "headers": {
-            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept": "*/*",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
-            "upgrade-insecure-requests": "1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "referer": "http://localhost:5230/resources",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
             "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"macOS\""
+            "sec-ch-ua-platform": "\"macOS\"",
+            "x-grpc-web": "1"
         },
         "get_params": "",
         "post_params": "",
         "edges": [],
         "role": "user",
         "public": false,
-        "es_id": "USER|GET|http://localhost:5230/auth",
+        "es_id": "USER|GET|http://localhost:5230/api/v1/resources",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {
@@ -562,12 +977,12 @@
             "body_kind": ""
         }
     },
-    "USER|GET|http://localhost:5230/u/attacker1": {
-        "req_url": "http://localhost:5230/u/attacker1",
+    "USER|GET|http://localhost:5230/memos.api.v1.ResourceService/ListResources": {
+        "req_url": "http://localhost:5230/memos.api.v1.ResourceService/ListResources",
         "headers": {
             "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "accept-language": "en-US",
-            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
             "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
@@ -579,7 +994,119 @@
         "edges": [],
         "role": "user",
         "public": false,
-        "es_id": "USER|GET|http://localhost:5230/u/attacker1",
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.ResourceService/ListResources",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.UserService/SearchUsers": {
+        "req_url": "http://localhost:5230/memos.api.v1.UserService/SearchUsers",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.UserService/SearchUsers",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.UserService/GetUser": {
+        "req_url": "http://localhost:5230/memos.api.v1.UserService/GetUser",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.UserService/GetUser",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.UserService/UpdateUser": {
+        "req_url": "http://localhost:5230/memos.api.v1.UserService/UpdateUser",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.UserService/UpdateUser",
+        "method": "GET",
+        "operation": "SELECT",
+        "param_signature": {
+            "query_keys": [],
+            "query_values": [],
+            "body_keys": [],
+            "body_values": [],
+            "body_kind": ""
+        }
+    },
+    "USER|GET|http://localhost:5230/memos.api.v1.WebhookService/ListWebhooks": {
+        "req_url": "http://localhost:5230/memos.api.v1.WebhookService/ListWebhooks",
+        "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-language": "en-US",
+            "cookie": "memos_session=MTc3ODgxMzA4N3xEdi1CQkFFQ180SUFBUkFCRUFBQUh2LUNBQUVHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FEYVc1MEJBSUFCQT09fLRJ6xFamIHhFOh8SFAJ3Hl9Ox1OO2-3VUF3uCpQWdt1; memos.access-token=eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+            "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"HeadlessChrome\";v=\"145\", \"Chromium\";v=\"145\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"macOS\""
+        },
+        "get_params": "",
+        "post_params": "",
+        "edges": [],
+        "role": "user",
+        "public": false,
+        "es_id": "USER|GET|http://localhost:5230/memos.api.v1.WebhookService/ListWebhooks",
         "method": "GET",
         "operation": "SELECT",
         "param_signature": {

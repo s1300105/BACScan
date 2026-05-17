@@ -142,6 +142,33 @@ class BrowserHandler:
                     except Exception:
                         pass
 
+        # Merge any new/refreshed cookies from the browser back into the auth
+        # file without removing cookies that the server did not re-issue (e.g.
+        # memos.access-token is only set on login, not on every page load).
+        try:
+            state = await self.browser_context.storage_state()
+            with open(crawler_config.COOKIE_PATH) as _rf:
+                existing = json.load(_rf)
+            existing_by_name = {c["name"]: c for c in existing.get("cookies", [])}
+            for ck in state.get("cookies", []):
+                existing_by_name[ck["name"]] = ck
+            existing["cookies"] = list(existing_by_name.values())
+            # Merge localStorage origins (add/update, never remove)
+            existing_origins = {e.get("origin"): e for e in existing.get("origins", [])}
+            for orig in state.get("origins", []):
+                key = orig.get("origin")
+                if key:
+                    merged_ls = {item["name"]: item for item in existing_origins.get(key, {}).get("localStorage", [])}
+                    for item in orig.get("localStorage", []):
+                        merged_ls[item["name"]] = item
+                    existing_origins[key] = {"origin": key, "localStorage": list(merged_ls.values())}
+            existing["origins"] = list(existing_origins.values())
+            with open(crawler_config.COOKIE_PATH, "w") as _wf:
+                json.dump(existing, _wf, indent=4)
+            logging.debug(f"[+] Auth warm-up: merged refreshed cookies into {crawler_config.COOKIE_PATH}")
+        except Exception as e:
+            logging.debug(f"[-] Auth warm-up: failed to merge cookies: {repr(e)}")
+
     async def refresh_context(
         self,
     ):

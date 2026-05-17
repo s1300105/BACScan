@@ -12,7 +12,7 @@
         },
         {
             "name": "memos.access-token",
-            "value": "eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6MTc3OTQ0ODc2MSwiaWF0IjoxNzc4ODQzOTYxfQ.-OoyBzsD5OuELKjYFMEw0aZQFiXcwaGNzod6OyPAKmc",
+            "value": "eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiI5IiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjUwOTY0MCwiaWF0IjoxNzc4OTA5NjQwfQ.TUlcqrobb_0M0x-ptv8pOZlMmFZHhEO5LD2sDiIJdBM",
             "domain": "localhost",
             "path": "/",
             "expires": 1779436042,

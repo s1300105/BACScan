@@ -93,6 +93,7 @@ class Config:
         ]
         self.BUILD_DEP_SKIP_PROBE_PATTERNS = [
             r"/api/v1/users/[^/?]+",
+            r"/api/v1/memos/[^/?]+",
         ]
         self.VISITOR = "visitor"
         self.USER_ROLE = "user"

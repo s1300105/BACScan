@@ -15,11 +15,37 @@
             "value": "eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiIiwiaXNzIjoibWVtb3MiLCJzdWIiOiIxIiwiYXVkIjpbInVzZXIuYWNjZXNzLXRva2VuIl0sImV4cCI6NDkzMjQ0MTk1NCwiaWF0IjoxNzc4ODQxOTU0fQ.BohofGy087rVVhCb8Ron9gLr_N3UJzpVdZj1vcrm9Tg",
             "domain": "localhost",
             "path": "/",
-            "expires": 1779436043,
+            "expires": 1813472412.816463,
             "httpOnly": true,
             "secure": false,
             "sameSite": "Lax"
         }
     ],
-    "origins": []
+    "origins": [
+        {
+            "origin": "http://localhost:5230",
+            "localStorage": [
+                {
+                    "name": "joy-mode",
+                    "value": "light"
+                },
+                {
+                    "name": "joy-color-scheme-dark",
+                    "value": "dark"
+                },
+                {
+                    "name": "appearance",
+                    "value": "\"light\""
+                },
+                {
+                    "name": "joy-color-scheme-light",
+                    "value": "light"
+                },
+                {
+                    "name": "locale",
+                    "value": "\"en\""
+                }
+            ]
+        }
+    ]
 }
